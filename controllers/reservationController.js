@@ -20,7 +20,7 @@ exports.getReservationsByCatway = async (req, res) => {
 // GET ID Reservation
 exports.getReservationById = async (req, res) => {
   try {
-    const reservation = await Reservation.findById(req.params.reservationId);
+    const reservation = await Reservation.findById(req.params.idReservation);
     
     if (!reservation) {
       return res.status(404).json({ message: 'Réservation non trouvée' });
@@ -63,7 +63,7 @@ exports.createReservation = async (req, res) => {
 exports.updateReservation = async (req, res) => {
   try {
     const reservation = await Reservation.findByIdAndUpdate(
-      req.params.reservationId,
+      req.params.idReservation,
       {
         clientName: req.body.clientName,
         boatName: req.body.boatName,
@@ -86,7 +86,7 @@ exports.updateReservation = async (req, res) => {
 // DELETE
 exports.deleteReservation = async (req, res) => {
   try {
-    const reservation = await Reservation.findByIdAndDelete(req.params.reservationId);
+    const reservation = await Reservation.findByIdAndDelete(req.params.idReservation);
     
     if (!reservation) {
       return res.status(404).json({ message: 'Réservation non trouvée' });
