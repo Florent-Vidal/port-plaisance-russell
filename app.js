@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const connectDB = require('./config/db');
+const { verifyToken } = require('./middleware/authMiddleware');
 
 const app = express();
 
@@ -68,7 +69,7 @@ const catwayRoutes = require('./routes/catwaysRoutes');
 const reservationRoutes = require('./routes/reservationRoutes'); 
 
 // Route pour récupérer les réservations
-app.get('/api/catways/reservations/all', async (req, res) => {
+app.get('/api/catways/reservations/all', verifyToken, async (req, res) => {
     try {
         const Reservation = require('./models/Reservation');
         const reservations = await Reservation.find().sort({ startDate: -1 });
