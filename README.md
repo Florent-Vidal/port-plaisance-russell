@@ -1,4 +1,4 @@
-# 🚤 Port de Plaisance Russell
+# Port de Plaisance Russell
 
 Application web de gestion d'un port de plaisance : les capitaineries y gèrent les
 **catways** (pontons d'amarrage), les **réservations** des plaisanciers et les
@@ -224,4 +224,4 @@ port-plaisance-russell/
 
 ## Auteur
 
-**Florent Vidal** — Développeur Web et Web Mobile, Centre Européen de Formation.
+**Florent Vidal** — Projets réalisées dans le cadre de ma formation Développeur Web avec le Centre Européen de Formation.
