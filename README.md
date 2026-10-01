@@ -225,4 +225,3 @@ port-plaisance-russell/
 ## Auteur
 
 **Florent Vidal** — Développeur Web et Web Mobile, Centre Européen de Formation.
-[github.com/Florent-Vidal](https://github.com/Florent-Vidal)
